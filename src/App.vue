@@ -1,0 +1,37 @@
+<template>
+  <div id="app">
+    <!-- <img src="./assets/logo.png"> -->
+    <router-view/>
+  </div>
+</template>
+
+<script>
+export default {
+  name: 'App'
+}
+</script>
+
+<style lang="scss">
+body{
+  background-color: $blue;
+  font-family: 'Roboto';
+  color: $w;
+  font-size: 20px;
+  font-weight: normal;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+button:focus{
+  outline: none;
+}
+
+h1{
+  font-size: 64px;
+  font-weight: bold;
+}
+h2{
+  font-size: 24px;
+  font-weight: normal;
+}
+</style>
