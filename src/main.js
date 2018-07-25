@@ -5,6 +5,7 @@ import App from './App'
 import router from './router'
 // import TweenMax from 'gsap'
 // import TimelineMax from 'gsap'
+import './styles/applications.scss'
 
 Vue.config.productionTip = false
 

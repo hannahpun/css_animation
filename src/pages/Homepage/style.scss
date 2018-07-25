@@ -44,14 +44,9 @@
 }
 // circle
 .circle{
-    width: 535px;
-    height: 535px;
-    border-radius: 50%;
-    background-color: $blue-dark;
+    @include circle(535px, $blue-dark);
 }
 // square
 .square{
-    width: 450px;
-    height: 450px;
-    background-color: $b;
+    @include square(450px, $b)
 }

@@ -10,6 +10,10 @@ export default new Router({
       path: '/',
       name: 'Home',
       component: () => import('@/pages/Homepage')
+    },
+    {
+      path: '/page1',
+      component: () => import('@/pages/Page1')
     }
   ]
 })

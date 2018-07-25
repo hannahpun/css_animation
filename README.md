@@ -1,4 +1,4 @@
-> css animation with TweenMax and TimelineMax
+> Css animation with TweenMax and TimelineMax
 
 ![Image](http://www.hannahpun.me/vue_listfilter/stage8.png)
 
