@@ -21,7 +21,11 @@ export default new Router({
     },
     {
       path: '/page3',
-      component: () => import('@/pages/Page2')
+      component: () => import('@/pages/Page3')
+    },
+    {
+      path: '/done',
+      component: () => import('@/pages/Done')
     }
   ]
 })

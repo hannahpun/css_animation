@@ -1,0 +1,26 @@
+.text-wrapper{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+}
+.text{
+  text-align: center;
+  white-space:nowrap;
+}
+.triangle{
+  position: absolute;
+}
+
+
+$colors: $w, $b, $blue-dark;
+
+@for $i from 1 through 10{
+  .triangle#{$i}{
+    @include triangle(70px, nth($colors, random(3)));
+    bottom: percentage(random(100)/100)*-1;
+    left: percentage(random(60)/100)*-1;
+    transform: rotate(random(360) + deg) scale(random(3));
+  }
+} 
