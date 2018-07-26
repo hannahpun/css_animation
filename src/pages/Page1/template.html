@@ -1,19 +1,5 @@
-<div class="page1">
-  <div class="mainTxtWrapper">
-    <transition name="fade">
-      <div class="mainTxt" v-if="show">
-        <h1>Q1</h1>
-        <h3>If one day you get a gift that can change the rule of the world, which ability will you choose?</h3>
-        <p class="note">Choose the answer appeared in your mind instantly</p>
-        <form>
-          <button class="myBtn">Destroy all humans in the world</button>
-          <button class="myBtn">Make the war never happened</button>
-          <button class="myBtn">You won’t get old and live forever</button>
-        </form>
-      </div>
-    </transition>
-  </div>
-  
+<div class="page1 page">
+  <Question :detail="details" :options="options"></Question>  
   <div class="mainShape">
     <div class="square"></div>
     <div class="circle"></div>

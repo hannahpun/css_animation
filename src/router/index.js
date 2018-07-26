@@ -14,6 +14,14 @@ export default new Router({
     {
       path: '/page1',
       component: () => import('@/pages/Page1')
+    },
+    {
+      path: '/page2',
+      component: () => import('@/pages/Page2')
+    },
+    {
+      path: '/page3',
+      component: () => import('@/pages/Page2')
     }
   ]
 })
