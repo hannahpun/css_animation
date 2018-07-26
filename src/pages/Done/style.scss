@@ -4,6 +4,7 @@
   justify-content: center;
   width: 100vw;
   height: 100vh;
+  position: fixed;
 }
 .text{
   text-align: center;
@@ -20,7 +21,16 @@ $colors: $w, $b, $blue-dark;
   .triangle#{$i}{
     @include triangle(70px, nth($colors, random(3)));
     bottom: percentage(random(100)/100)*-1;
-    left: percentage(random(60)/100)*-1;
+    left: percentage(random(100)/80)*-1;
     transform: rotate(random(360) + deg) scale(random(3));
   }
 } 
+
+
+.triangle11{
+  position: absolute;
+  @include triangle(500px, $blue-dark);
+  bottom: -100%;
+  left: -100%;
+  transform: rotate(45deg);
+}

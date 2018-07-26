@@ -20,7 +20,7 @@ body{
   font-weight: normal;
   width: 100vw;
   height: 100vh;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 button:focus{
   outline: none;
@@ -43,5 +43,6 @@ h3{
     width: 100vw;
     height: 100vh;
     justify-content: space-between;
+    overflow: hidden;
 }
 </style>
