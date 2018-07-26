@@ -1,0 +1,30 @@
+.mainTxtWrapper{
+    height: 100vh;
+}
+.text-wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+  }
+  .text{
+    text-align: center;
+    white-space:nowrap;
+}
+h2{
+    margin-bottom: 10px;
+}
+
+.list{
+    margin-left: 70px;
+    li{
+        font-size: 36px;
+        display: block;
+        color: $blue-dark;
+        margin-bottom: 35px;
+        font-weight: bold;
+    }
+    
+}

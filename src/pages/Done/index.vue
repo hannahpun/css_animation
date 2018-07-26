@@ -3,39 +3,50 @@
 export default {
   name: 'done',
   mounted(){
+    var that = this;
+    let currentY = 0
     var timeline = new TimelineMax({
         onComplete: this.myComplete
     });
-    timeline.staggerTo('.triangle', 1, {
-      left: '120%',
-      bottom: '120%'
-    }, 0.3)
-    .to('.triangle11', 4, {
-      left: '120%',
-      bottom: '120%',
-      scale: 5
+
+
+    var bigTriangle = TweenMax.to('.triangle11', 3, {
+      x: -550,
+      y: 250
     })
+
+    timeline.staggerTo('.triangle', 1, {
+      cycle:{
+        //an array of values
+        // backgroundColor:["red", "white", "#00f"],
+        //function that returns a value
+        x: function(index){
+          return 2000;
+        },
+        y: function(index){
+          return -500 - index*150;
+        }
+      }   
+    }, 0.1)
+    .add(bigTriangle, 1)
     
     timeline.pause()
 
     
     
-    
-
+    // var htmlH = document.documentElement.scrollHeight - 1000;
+    let progress = 0
     window.addEventListener("scroll", function(){
-      let currentY = window.scrollY;
+      let pageHeight = document.querySelector('#app').clientHeight - window.innerHeight;
+      currentY = window.scrollY;
 
-      let pageHeight = window.screen.availHeight - window.innerHeight;
+      
       // debugger;
      
-      let progress = currentY/pageHeight
-
-      console.log('html: ', window.screen.availHeight )
-      console.log('body: ', window.innerHeight)
-      // console.log("currentY: ", currentY)
-      // console.log("pageHeight: ", pageHeight)
-      console.log('progress: ', progress)
-      // console.log('<hr/>')
+      progress = currentY/pageHeight
+      if(progress > 1){
+        that.$router.push('result')
+      }
       
       timeline.progress(progress)
       timeline.pause()

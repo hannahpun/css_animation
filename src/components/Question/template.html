@@ -3,6 +3,7 @@
     <div class="mainTxt" v-if="show">
       <h1>{{detail.q}}</h1>
       <h3>{{detail.title}}</h3>
+      <slot></slot>
       <p class="note">{{detail.note}}</p>
       <form>
         <button class="myBtn" v-for="item in options">{{item}}</button>

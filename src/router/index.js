@@ -26,6 +26,10 @@ export default new Router({
     {
       path: '/done',
       component: () => import('@/pages/Done')
+    },
+    {
+      path: '/result',
+      component: () => import('@/pages/Result')
     }
   ]
 })
