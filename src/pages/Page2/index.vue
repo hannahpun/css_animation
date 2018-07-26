@@ -7,6 +7,7 @@ export default {
     return {
       details: {
         q: "Q2",
+        nextPage: 'page3',
         title: "Imagine you’re almost late, but totally lost at a forked road. Which way do you prefer to go?",
         note: "Choose the answer appeared in your mind instantly"
       },

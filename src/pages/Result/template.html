@@ -1,11 +1,4 @@
 <div class="result">
-  <Question :detail="details" :options="options">
-    <ul class="list">
-      <li>AGGRESSIVE</li>
-      <li>INDEPENDENT</li>
-      <li>SELF-MOTIVATED</li>
-    </ul>
-  </Question>  
   <transition name="fade">
    <div class="text-wrapper">
      <div class="text">
@@ -14,4 +7,11 @@
      </div>
    </div>
   </transition>
+  <Question :detail="details" :options="options">
+      <ul class="list">
+        <li>AGGRESSIVE</li>
+        <li>INDEPENDENT</li>
+        <li>SELF-MOTIVATED</li>
+      </ul>
+    </Question>
 </div>

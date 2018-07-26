@@ -7,6 +7,7 @@ export default {
     return {
       details: {
         q: "Q1",
+        nextPage: 'page2',
         title: "If one day you get a gift that can change the rule of the world, which ability will you choose?",
         note: "Choose the answer appeared in your mind instantly"
       },

@@ -18,6 +18,11 @@ export default {
   },
   mounted(){
     this.show = true;
+  },
+  methods: {
+    onClick(){
+      this.$router.push(this.detail.nextPage)
+    }
   }
 }
 </script>

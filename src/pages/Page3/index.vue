@@ -7,6 +7,7 @@ export default {
     return {
       details: {
         q: "Q3",
+        nextPage: 'done',
         title: "When you’re in a exam which you barely prepared for, which is your priority solution?",
         note: "Choose the answer appeared in your mind instantly"
       },
