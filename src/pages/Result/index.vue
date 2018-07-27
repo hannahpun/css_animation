@@ -9,10 +9,22 @@ export default {
         q: "",
         title: "",
         nextPage: '/',
-        note: "The triangle type people are natural-born leaders, full of passion and motivation,  trying to fix their mistakes as they go."
+        note: ''
+        // note: "The triangle type people are natural-born leaders, full of passion and motivation,  trying to fix their mistakes as they go."
       },
       options: ["Try Again"]
     }
+  },
+  mounted(){
+    var timeline = new TimelineMax();
+    timeline.staggerTo('.triangle', 1, {
+      cycle:{
+        top: function(index){
+          return Math.random()*70 + '%';
+        }
+      }
+      
+    }, 0.1)
   }
 }
 </script>

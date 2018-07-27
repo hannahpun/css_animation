@@ -1,13 +1,18 @@
-.mainTxtWrapper{
+.result{
+    position: relative;
+    width: 100vw;
     height: 100vh;
+    overflow: hidden;
 }
+
 .text-wrapper{
     display: flex;
     align-items: center;
     justify-content: center;
     width: 100vw;
     height: 100vh;
-    position: fixed;
+    // position: fixed;
+    margin-top: -100px;
   }
   .text{
     text-align: center;
@@ -16,7 +21,11 @@
 h2{
     margin-bottom: 10px;
 }
-
+.quetions{
+    width: 100% !important;
+    // position: absolute;
+    // top: 30%;
+}
 .list{
     margin-left: 70px;
     li{
@@ -27,4 +36,40 @@ h2{
         font-weight: bold;
     }
     
+}
+
+//triangle
+$colors: $b, $blue-dark;
+
+.triangle{
+    position: absolute;
+    top: -100px;
+    transform: rotate(180deg);
+}
+@for $i from 1 through 7{
+  .triangle#{$i}{
+    @include triangle(30px, nth($colors, random(2)));
+    // transform: translate(percentage(random(100)/100)*-1,percentage(random(100)/100)*-1);
+    left: percentage(random(100)/100);
+  }
+} 
+.triangle-big{
+    position: absolute;  
+    bottom: 0px;
+    left: 50%;
+}
+.triangle8{
+    @include triangle(200px, $blue-dark);
+    transform: translateX(-50%)
+}
+.triangle9{
+    @include triangle(200px, $w);
+    transform: translateX(-45%);
+    z-index: -1;
+}
+.triangle10{
+    @include triangle(180px, $b);
+    transform: translateX(-30%);
+    bottom: -20px;
+    z-index: -1;
 }
