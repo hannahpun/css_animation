@@ -5,7 +5,9 @@
   position: relative;
   overflow: hidden;
 }
-
+.page2{
+  background-color: $blue-dark;
+}
 //shape
 .square, .circle, .triangle{
   position: absolute;
