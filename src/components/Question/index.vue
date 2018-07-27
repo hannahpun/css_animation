@@ -21,6 +21,7 @@ export default {
   },
   methods: {
     onClick(){
+      // console.log('hihihi')
       this.$router.push(this.detail.nextPage)
     }
   }

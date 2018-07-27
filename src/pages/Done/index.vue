@@ -44,7 +44,7 @@ export default {
       // debugger;
      
       progress = currentY/pageHeight
-      if(progress > 1){
+      if(progress > 0.9){
         that.$router.push('result')
       }
       

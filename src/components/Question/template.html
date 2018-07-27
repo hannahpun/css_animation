@@ -6,7 +6,7 @@
       <slot></slot>
       <p class="note">{{detail.note}}</p>
       <form>
-        <button class="myBtn" v-for="item in options" @click="onClick()">{{item}}</button>
+        <button class="myBtn" v-for="item in options" @click.prevent="onClick()">{{item}}</button>
       </form>
     </div>
   </transition>

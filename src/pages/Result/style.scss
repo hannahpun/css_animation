@@ -44,6 +44,7 @@ $colors: $b, $blue-dark;
 .triangle{
     position: absolute;
     top: -100px;
+    z-index: -1;
     transform: rotate(180deg);
 }
 @for $i from 1 through 7{
