@@ -14,6 +14,7 @@ export default {
       x: -550,
       y: 250
     })
+    
 
     timeline.staggerTo('.triangle', 1, {
       cycle:{
@@ -28,6 +29,12 @@ export default {
         }
       }   
     }, 0.1)
+    .to('.result', 0.1, {
+      // backgroundColor: '#0027C8'
+    }, 2)
+    .to('.text', 0.1, {
+      opacity: 0
+    }, 2)
     .add(bigTriangle, 1)
     
     timeline.pause()
@@ -37,20 +44,28 @@ export default {
     // var htmlH = document.documentElement.scrollHeight - 1000;
     let progress = 0
     window.addEventListener("scroll", function(){
-      let pageHeight = document.querySelector('#app').clientHeight - window.innerHeight;
+      let pageHeight = document.querySelector('html').scrollHeight - window.innerHeight;
       currentY = window.scrollY;
 
       
       // debugger;
-     
+      // console.log(
+      //   currentY,
+      //   pageHeight,
+      //   document.querySelector('html').scrollHeight,
+      //   document.querySelector('html').clientHeight,
+      // )
       progress = currentY/pageHeight
-      if(progress > 0.9){
-        that.$router.push('result')
-      }
+     
       
       timeline.progress(progress)
       timeline.pause()
     })
+  },
+  methods: {
+    myComplete(){
+      this.$router.push('result')
+    }
   }
 }
 </script>

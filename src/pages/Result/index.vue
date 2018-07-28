@@ -20,7 +20,7 @@ export default {
     timeline.staggerTo('.triangle', 1, {
       cycle:{
         top: function(index){
-          return Math.random()*70 + '%';
+          return Math.random()*50 + '%';
         }
       }
       
